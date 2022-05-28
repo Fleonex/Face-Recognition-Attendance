@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mark_Attendance</title>
+</head>
+<body>
+  <h1>Mark your attendance</h1>
+  <img src="{{ url_for('video_feed') }}" />
+  <h2>Your Name is {{name}}</h2>
+  <br />
+  <h2>Is That Correct?</h2>
+  <form method="POST" action="">
+    <input type="submit" name="check" value="YES" />
+  </form>
+  <form method="POST" action="">
+    <input type="submit" name="check" value="NO" />
+  </form>
+</body>
+</html>

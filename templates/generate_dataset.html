@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/buttons.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/attendance.css') }}"
+  />
+  <title>Generate Dataset</title>
+</head>
+<body>
+  <h1>Generating Dataset</h1>
+  <h2>Please sit in a well lit room and face the camera directly</h2>
+  <script>
+    setTimeout(function(){
+        window.location.href = '{{url_for('take_photos')}}';
+    }, 2000);
+  </script>
+</body>
+</html>

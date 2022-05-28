@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/buttons.css') }}"
+  />
+  <link
+    href="http://fonts.googleapis.com/css?family=Montserrat:400,700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/manage_attendance.css') }}"
+  />
+  <title>Manage Attendance</title>
+</head>
+<body>
+  <h1>What would you like to do ?:</h1>
+  <section>
+    <div class="main-container">
+      <ul class="grid-wrapper">
+        <li>
+          <a href="{{ url_for('start_attendance') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            START ATTENDANCE
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('stop_attendance') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            STOP ATTENDANCE
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

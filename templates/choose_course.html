@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/buttons.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/choose_course.css') }}"
+  />
+  <title>Choose Class</title>
+</head>
+<body>
+  <h1>Which class are you attending?</h1>
+
+  <section>
+    <div class="main-container">
+      <ul class="grid-wrapper">
+        <li>
+          <a href="{{ url_for('ma101') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            MA101
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('cs101') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            CS101
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('ce101') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            CE101
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('me101') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            ME101
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('hs101') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            HS101
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('cs110') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            CS110
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

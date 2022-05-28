@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Face Recognition Website</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/index.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/buttons.css') }}"
+  />
+</head>
+<body>
+    <h1>FACE RECOGNITION ATTENDANCE PROJECT</h1>
+    <h2>By M Samson</h2>
+
+    <div class="main-container">
+      <ul class="grid-wrapper">
+        <li>
+          <a href="{{ url_for('choose_course') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            MARK ATTENDANCE
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('login') }}">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            LOGIN
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    padding-top: 15rem;
+    min-height: 100vh;
+    background: #031321;
+    font-family: consolas;
+}
+a
+{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 44px;
+  background-color: #031321;
+}
+
+h1
+{
+  display: flex;
+  font-size: 3rem;
+  justify-content:center;
+  align-items: top;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+h2
+{
+  display: flex;
+  font-size: 2rem;
+  justify-content:center;
+  align-items: top;
+  color: white;
+  margin-bottom: 2rem;
+}
