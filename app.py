@@ -85,11 +85,6 @@ class RegistrationForm(FlaskForm):
         render_kw={"placeholder": "Email@example.com"})
     submit = SubmitField("Register")
 
-    # This is a function to check if the username entered is already present in the database
-    def validate_username(self, username):
-        existing_user_name = User.query.filter_by(username=username.data).first()
-        if existing_user_name:
-            raise ValidationError("That username already exists. Please choose a different one")
 
 
 # This form takes the login details
@@ -511,6 +506,10 @@ def admin_dashboard():
     return render_template('admin_dashboard.html', name=user)
 
 
+# ------------------------------------------------
+# ----------ADMIN DASHBOARD BEGINS----------------
+# ------------------------------------------------
+
 # This is the view for registering new users
 # This can only be accessed by the admin
 
@@ -541,6 +540,17 @@ def register():
             # Render the register template
             return render_template('register.html', form=form, check=check)
 
+        # Search the database for entered username
+        username = User.query.filter_by(username=form.username.data).first()
+
+        # If the username exists
+        if username:
+            # Give an error message
+            flash("The username already exists", 'error')
+
+            # Render the register template
+            return render_template('register.html', form=form, check=check)
+
         # If the email does not exist
         # hash the password before storing the information
         hashed_password = bcrypt.generate_password_hash(form.password.data)
@@ -562,15 +572,10 @@ def register():
 
     # If the form is not valid according the validator in RegistrationForm
     else:
-        # Give an error
-        flash('The Username already Exists', 'error')
         # Render the register template
         return render_template('register.html', form=form, check=check)
 
 
-# ------------------------------------------------
-# ----------ADMIN DASHBOARD BEGINS----------------
-# ------------------------------------------------
 
 # This is the view for logging users out
 # In order to logout, a user must be logged in
