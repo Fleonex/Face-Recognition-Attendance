@@ -13,39 +13,14 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+</br>
+</br>
 <img src = "static/images/MainPage.jpg"/>
-
+</br>
+</br>
 This is a browser-based application  to demonstrate application of Face Recognition technology in Tracking attendance of a student in an offline setting,
 by using Machine Learning Models from scikit-learn and OpenCV library in Python.
 
@@ -85,7 +60,16 @@ To get a local copy up and running follow these simple steps.
    ```sh
    pip install -r requirements.txt
    ```
+### Running the App
 
+ After the installation has been done, open cmd in the directory and run app.py
+   ```sh
+   python app.py
+   ```
+   Now the webapp will be running on your local host port 5000
+   ```sh
+   http://localhost:5000
+   ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -99,7 +83,11 @@ Only the admin ( course coordinator ) can register a new student.
 </br>
 </br>
 In order to access the admin portal, Click on the Login Button on the main page.
-<img src = "static/images/login.jpg"/>
+</br>
+</br>
+<img src = "static/images/login.jpg" width=500/>
+</br>
+</br>
 Login with the admin account whose credentials are
 </br>
 </br>
@@ -108,39 +96,41 @@ Login with the admin account whose credentials are
 <strong>Password</strong> : password
 </br>
 </br>
-<img src = "static/images/adminlogin.jpg"/>
+<img src = "static/images/adminlogin.jpg" width=500/>
 </br>
 </br>
 You will be greeted by the admin dashboard
 </br>
 </br>
 Click on the "Register New User" Button
-<img src = "static/images/admindashboatd.jpg"/>
+</br>
+</br>
+<img src = "static/images/admindashboard.jpg" width=500/>
 </br>
 </br>
 Fill in the details
 </br>
 </br>
-<img src = "static/images/register.jpg"/>
+<img src = "static/images/register.jpg" width=500/>
 </br>
 </br>
 After correctly filling the form, your webcam will activate and your dataset will be generated. 
 Please be seated in a well lit room and be patient as 100 photos will be taken
 </br>
 </br>
-<img src = "static/images/generating_dataset.jpg"/>
+<img src = "static/images/generating_dataset.jpg" width=500/>
 </br>
 </br>
 After the photos have been taken, you will be greeted with this confirmation screen
 </br>
 </br>
-<img src = "static/images/photostaken.jpg"/>
+<img src = "static/images/photostaken.jpg" width=500/>
 </br>
 </br>
 And your photos would have been added to the dataset directory under your name
 </br>
 </br>
-<img src = "static/images/dataset.jpg"/>
+<img src = "static/images/dataset.jpg" width=500/>
 </br>
 </br>
 Now you have been successfully registered, but the model has not been trained to recognize you yet.
@@ -154,19 +144,19 @@ This has been done separately and not immediately after registration is to allow
 To train the model go to the admin dashboard and click on the "Train Model" Button
 </br>
 </br>
-<img src = "static/images/trainmodel.jpg"/>
+<img src = "static/images/trainmodel.jpg" width=500/>
 </br>
 </br>
 As mentioned before this process takes time. You will be waiting in the waiting screen for around 3 to 4 minutes
 </br>
 </br>
-<img src = "static/images/waiting.jpg"/>
+<img src = "static/images/waiting.jpg" width=500/>
 </br>
 </br>
 After completion, You will be greeted by the confirmation page and redirected to the admin dashboard
 </br>
 </br>
-<img src = "static/images/train_confirmation.jpg"/>
+<img src = "static/images/train_conrfirmation.jpg" width=500/>
 </br>
 </br>
 Now you can mark your attendance!
@@ -180,75 +170,96 @@ In order to Mark your attendance, first the course coordinator (admin) has to st
 This can be done by clicking the "Manage Attendance" button in the admin dashboard
 </br>
 </br>
-<img src = "static/images/manageattendance.jpg"/>
+<img src = "static/images/manageattendance.jpg" width=500/>
 </br>
 </br>
 and starting the attendance
 </br>
 </br>
-<img src = "static/images/startattendance.jpg"/>
+<img src = "static/images/startattendance.jpg" width=500/>
 </br>
 </br>
 Now the students can click on the "Mark Attendance" button in the main page to choose the course and mark their attendance
 </br>
 </br>
-<img src = "static/images/markattendance.jpg"/>
-<img src = "static/images/choosecourse.jpg"/>
-<img src = "static/images/checkin.jpg"/>
-<img src = "static/images/attendancemarked.jpg"/>
-<img src = "static/images/checkin.jpg"/>
-<img src = "static/images/attendancemarkedout.jpg"/>
+<img src = "static/images/markattendance.jpg" width=500/>
+</br>
+<img src = "static/images/choosecourse.jpg" width=500/>
+</br>
+<img src = "static/images/checkin.jpg" width=500/>
+</br>
+<img src = "static/images/attendancemarked.jpg" width=500/>
+</br>
+<img src = "static/images/checkin.jpg" width=500/>
+</br>
+<img src = "static/images/attendancemarkedout.jpg" width=500/>
 </br>
 </br>
 ### View Attendance
 You can view your attendance by logging into your account and clicking on the view attendance button
 </br>
 </br>
-<img src = "static/images/dashboard.jpg"/>
-<img src = "static/images/chooseattendance.jpg"/>
-<img src = "static/images/ma101.jpg"/>
+<img src = "static/images/dashboard.jpg" width=500/>
+</br>
+<img src = "static/images/chooseattendance.jpg" width=500/>
+</br>
+<img src = "static/images/ma101.jpg" width=500/>
 </br>
 </br>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- FEATURES -->
+## Features
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- Registering a user
+    - Generating a dataset for the registered user
+    - Augmenting the generated dataset
+    - Training the Model to update it
+- Login
+    - Separated user into admin and normal
+    - Dashboard for both
+    - Admin can manage the attendance and register a new user
+    - User can login and view their attendance 
+- Automatic Attendance Marking
+    - After the attendance has begun, a user can mark their attendance with ease
+    - Check In and Check Out time are noted
+    - User can choose which course to mark attendance for
+- Viewing Attendance
+    - A student can login to view his attendance for any course
+    - An admin can login to view overall attendance
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
+<!-- How Does It Work? -->
+## How is the Face Recognition done?
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+### Step 1: Data preprocessing
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Here the dataset is generated and labelled. Then the generated dataset is augmented. Then the augmented dataset is processed into usable data in the form of vectors
+which hold the face descriptions. This is done in app.py and data_preprocessing.py
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+### Step 2: Evaluating the model
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Here the data generated from preprocessing is used to train the 3 classfiers, Logisitic Regression, Support Vector Machines and Random Forest Classifier which predicts the name of the face. These 3 classifiers are combined using the voting classifier by assigning weights to each of them. The weights assigned are
+1. Logistic Regression : 2
+2. Support Vector Machines : 3
+3. Random Forest Classifier : 1
+</br>
+These weights have been assigned after testing with each model separately. This has been done in evaluating_model.py
 
+### Step 3: Tuning the model
 
+After combining the models, the parameters of each of the three individual models have been tuned using GridSearchCV and passing the parameters and the values that have to be tested. This has been done in evaluating_model.py
 
-<!-- LICENSE -->
-## License
+### Step 4: Pipeline all models
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+This step is to combine all the different models i.e. the face detection model, the face descriptor model and the face recognition model into one function that can be used to perform all these functions in an orderly way. This has been done in pipeline_webcam.py
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -256,38 +267,18 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 ## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
+M Samson
+</br>
+</br>
+EMAIL : fleonex2002@gmail.com
+</br>
+PHONE NO. : +91-9606214412
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+
+
+
+
