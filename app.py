@@ -186,8 +186,7 @@ def augment_dataset(DIR):
             # Augment them according to these properties
             p = Augmentor.Pipeline(path)
             p.zoom(probability=0.3, min_factor=0.8, max_factor=1.5)
-            p.flip_random(probability=0.4)
-            p.random_brightness(probability=0.3, min_factor=0.3, max_factor=1.2)
+            p.random_brightness(probability=0.3, min_factor=0.7, max_factor=1.2)
             p.skew(probability=0.4, magnitude=0.25)
             p.rotate(probability=0.3, max_left_rotation=0.3, max_right_rotation=0.3)
             p.sample(sample_size)
