@@ -148,7 +148,7 @@ def saveImage(img, username, imgid):
 
 def taking_photos(cap, username):
     # Declare the number of pictures to be taken
-    no_of_pics = 1
+    no_of_pics = 100
     count = 1
     # Repeat until count == no_of_pics
     while True:
@@ -161,7 +161,7 @@ def taking_photos(cap, username):
             saveImage(frame, username, count)
             count += 1
             # Wait for 1 second between photos
-            time.sleep(1)
+            time.sleep(0.3)
         else:
             break
 
