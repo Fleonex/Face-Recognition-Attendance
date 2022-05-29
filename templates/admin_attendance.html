@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/buttons.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static',filename='styles/view_attendance.css') }}"
+  />
+
+  <title>View Attendance</title>
+</head>
+<body>
+  <h1>Attendance</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Student Username</th>
+        <th>Course Name</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data %}
+      <tr>
+        <td>{{ item[1] }}</td>
+        <td>{{ item[2] }}</td>
+        <td>{{ item[3] }}</td>
+        <td>{{ item[4] }}</td>
+        <br />
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{{ url_for('admin_dashboard')}}">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Back to Dashboard
+  </a>
+</body>
+</html>
