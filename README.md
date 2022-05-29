@@ -263,6 +263,12 @@ This step is to combine all the different models i.e. the face detection model, 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- ADDITIONAL INFORMATION -->
+## Additional Files
+A file called Real_Time_Face_Recognition has been added to showcase the working of face recognition
+</br>
+</br>
+
 
 
 <!-- CONTACT -->
