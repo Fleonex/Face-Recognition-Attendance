@@ -7,7 +7,7 @@
     A Face Recognition based Attendance WebApp built with Flask and Python
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://youtu.be/D-4_eysKM2Q">View Demo</a>
   </p>
 </div>
 
@@ -182,6 +182,9 @@ and starting the attendance
 Now the students can click on the "Mark Attendance" button in the main page to choose the course and mark their attendance
 </br>
 </br>
+For marking attendance the webcam is activated for a short moment to recognize the user and then the data obtained is passed to the required views.
+</br>
+</br>
 <img src = "static/images/markattendance.jpg" width=500/>
 </br>
 <img src = "static/images/choosecourse.jpg" width=500/>
@@ -268,7 +271,9 @@ This step is to combine all the different models i.e. the face detection model, 
 A file called Real_Time_Face_Recognition.py has been added to showcase the working of face recognition
 </br>
 </br>
-
+<img src = "static/images/demo.jpg" width = 500/>
+</br>
+</br>
 
 
 <!-- CONTACT -->
