@@ -148,7 +148,7 @@ def saveImage(img, username, imgid):
 
 def taking_photos(cap, username):
     # Declare the number of pictures to be taken
-    no_of_pics = 100
+    no_of_pics = 1
     count = 1
     # Repeat until count == no_of_pics
     while True:
@@ -700,6 +700,29 @@ def stop_attendance():
 
     # Render confirmation template and redirect to dashboard
     return render_template('stop_attendance.html')
+
+# This is the view for viewing the attendance of the logged-in user
+# This can be accessed by the user dashboard
+# It displays the attendance data according to the course they requested
+
+@app.route('/admin_attendance')
+# This view can only be accessed if there is a user logged in
+@login_required
+def admin_attendance():
+    # Connect to the database
+    con = sqlite3.connect("database.db")
+    cur = con.cursor()
+
+    # These are the SQL Query for getting the attendance details
+    selectsql = "SELECT * FROM attendance "
+
+    # Execute the SQL Queries mentioned above and store them in variables
+    cur.execute(selectsql)
+    data = cur.fetchall()  # This contains id, username, class_name, check_in, check_out
+
+    # Pass the variables into the template and render it
+    return render_template('admin_attendance.html', data=data)
+
 
 
 # ------------------------------------------------
