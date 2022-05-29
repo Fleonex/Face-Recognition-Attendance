@@ -12,7 +12,7 @@ from sklearn.model_selection import GridSearchCV
 # Please have a look at data_preprocessing.py before reading this
 
 # This function takes the face descriptions extracted from the images by the data_preprocessing() function,
-# uses it to train three models and choose the best one for each case by the voting classifier model,
+# uses it to train three classifiers and choose the best one for each case by the voting classifier model,
 # fine-tunes the parameters by using GridSearchCV
 # and saves these parameters in a file called machinelearning_face_person_identity.pickle
 
@@ -32,28 +32,28 @@ def evaluating_model():
     # Split the data into train and test
     x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.8, random_state=0)
 
-    # Load the first model, Logistic Regression
+    # Load the first classifier, Logistic Regression
     # The parameters that are tuned for this model are penalty and solver
     model_logistic = LogisticRegression()
 
     # Train logistic regression
     model_logistic.fit(x_train, y_train)
 
-    # Load the second model, Support Vector Machines
+    # Load the second classifier, Support Vector Machines
     # The parameters that are tuned for this model are C and gamma
     model_svc = SVC(probability=True)
 
     # Train SVC
     model_svc.fit(x_train, y_train)
 
-    # Load the third model, Random Forest Classifier
+    # Load the third classifier, Random Forest Classifier
     # The parameters that are tuned for this model are number of estimators and max depth
     model_rf = RandomForestClassifier()
 
     # Train Random Forest Classifier
     model_rf.fit(x_train, y_train)
 
-    # Load the fourth model, Voting Classifier
+    # Load the fourth classifier, Voting Classifier
     # Pass the above three models along with their labels and weights
     # This model combines the three machine learning models
     model_voting = VotingClassifier(estimators=[
